@@ -4,6 +4,7 @@ from .context import (
 )
 import unittest
 
+
 class BrowserTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(self):
