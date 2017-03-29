@@ -2,13 +2,11 @@ import random
 
 class Lexicon(object):
     def __init__(self, lexicon_file):
-        self.lexicon = self.load_lexicon(lexicon_file)
-        self.words = list()
-        self.num_words = 0
+        self.load_lexicon(lexicon_file)
 
     def load_lexicon(self, lexicon_file):
         with open(lexicon_file, 'r') as f:
-            while (f.readline().strip != "---"):
+            while (f.readline().strip() != "---"):
                 pass
             words = f.readlines()
             self.words = [w.strip() for w in words]
@@ -19,13 +17,13 @@ class Lexicon(object):
             return None
         return self.words[random.randint(0, self.num_words-1)]
 
-    def get_random_words(self, num_words, skip_list=[], unique=True)
+    def get_random_words(self, num_words, skip_list=[], unique=True):
         word_list = list()
         if num_words >= self.num_words:
             #lol you cray.
             # return all words, minus those on the skip list
             pass
-        while len(word_list) < num_words-1:
+        while len(word_list) < num_words:
             w = self._random_word()
             if w not in skip_list:
                 word_list.append(w)

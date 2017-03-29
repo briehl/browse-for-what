@@ -1,1 +1,1 @@
-from .appbrowse import start
+from .lexicon import Lexicon
