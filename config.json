@@ -1,0 +1,8 @@
+{
+    "lexicon_file": "data/lexicon.txt",
+    "min_words": 2,
+    "max_words": 5,
+    "max_links_to_browse": 5,
+    "wait_time": 10,
+    "num_searches": 10
+}
