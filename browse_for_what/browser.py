@@ -19,8 +19,10 @@ class Browser(object):
         search_str = " ".join(word_list)
         print("query = {}".format(search_str))
         for url in search(search_str, num=links_to_browse, stop=1):
-            print("\t{}".format(url))
+            no_fail = ""
             try:
                 requests.get(url)
             except:
-                pass # who cares? We're just poking at the internet here. If it doesn't want to be poked, that's its problem.
+                no_fail = "X "
+            finally:
+                print("{}\t{}".format(no_fail, url))
