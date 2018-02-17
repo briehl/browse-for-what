@@ -1,9 +1,9 @@
 import unittest
-from configparser import ConfigParser
 from .context import (
     browse_for_what,
     lexicon_file
 )
+
 
 class LexiconTestCase(unittest.TestCase):
     @classmethod

@@ -4,5 +4,6 @@
     "max_words": 3,
     "max_links_to_browse": 5,
     "wait_time": 10,
-    "num_searches": 10
+    "num_searches": 10,
+    "browse_timeout": 20
 }
